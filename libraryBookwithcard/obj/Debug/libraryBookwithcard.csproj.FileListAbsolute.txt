@@ -1,0 +1,10 @@
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\bin\Debug\libraryBookwithcard.exe.config
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\bin\Debug\libraryBookwithcard.exe
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\bin\Debug\libraryBookwithcard.pdb
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.csproj.AssemblyReference.cache
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.csproj.SuggestedBindingRedirects.cache
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.Properties.Resources.resources
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.csproj.GenerateResource.cache
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.csproj.CoreCompileInputs.cache
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.exe
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.pdb
