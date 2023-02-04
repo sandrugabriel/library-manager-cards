@@ -8,3 +8,7 @@ C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwi
 C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.csproj.CoreCompileInputs.cache
 C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.exe
 C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.pdb
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.Form1.resources
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.Mockups.Mockup.resources
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.Mockups.MockupCard.resources
+C:\Mycode\CSHARP\libraryBookwithcard\libraryBookwithcard\obj\Debug\libraryBookwithcard.Mockups.MockupAddBook.resources

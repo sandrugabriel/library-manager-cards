@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,11 +12,11 @@ namespace libraryBookwithcard
 {
     internal class ControllerBooks
     {
-        private List<book> books;
+        private List<Book> books;
 
         public ControllerBooks() { 
         
-        books= new List<book>();
+        books= new List<Book>();
             load();
         
         }
@@ -31,7 +32,7 @@ namespace libraryBookwithcard
             while ((t = streamReader.ReadLine()) != null)
             {
 
-                book a = new book(t);
+                Book a = new Book(t);
 
                 books.Add(a);
             }
@@ -49,7 +50,19 @@ namespace libraryBookwithcard
 
         }
 
+        public void getBooks(List<Book> books1) {
+            
+            for(int i = 0; i < books.Count; i++)
+            {
 
+                Book a = books[i];
+                books1.Add(a);
+            }
+
+
+        }
+
+       
 
 
     }

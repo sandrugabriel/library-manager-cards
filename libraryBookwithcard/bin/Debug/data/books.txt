@@ -4,3 +4,4 @@
 8,D-ale carnavalului,Caragiale,Comedy,1885
 9,Fata din tren,Paula Hawkins,Thriller,2015
 10,Nu stiu sa iubesc,Sorin Tanase,Comedy,2015
+2,Ion,Liviu Rebreanu,Classic,1990
