@@ -38,6 +38,11 @@ namespace libraryBookwithcard.Models
 
         }
 
+        public int getId()
+        {
+            return id;
+        }
+
         public string getTitle()
         {
             return title;
@@ -91,6 +96,10 @@ namespace libraryBookwithcard.Models
             return t;
         }
 
+        public string textBook()
+        {
 
+           return id.ToString() + "," + title + "," + author + "," + genre + "," + year.ToString()+ "\n";
+        }
     }
 }

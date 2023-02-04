@@ -62,7 +62,58 @@ namespace libraryBookwithcard
 
         }
 
-       
+        public string textAllBooks(string text) {
+
+            string t = "";
+
+            for(int i = 0; i < books.Count; i++)
+            {
+
+                t += books[i].textBook();
+
+            }
+
+            return t + text;
+
+        
+        }
+
+        public void addBookFisier(string text)
+        {
+            string t = textAllBooks(text);
+            string patch = Application.StartupPath + @"/data/books.txt";
+            File.WriteAllText(patch, t);
+            load();
+        }
+    
+        public Book getIdBooks(int id)
+        {
+
+            for(int i=0;i<books.Count;i++) {
+                if (id == books[i].getId())
+                {
+                    return books[i];
+                }
+            }
+
+            return null;
+
+        }
+
+        public int generareId()
+        {
+
+            Random random = new Random();
+
+            int id = random.Next();
+            while (this.getIdBooks(id) != null)
+            {
+                id = random.Next();
+            }
+
+
+            return id;
+        }
 
 
     }
