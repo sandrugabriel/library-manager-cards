@@ -30,7 +30,8 @@ namespace libraryBookwithcard
         private void button1_Click(object sender, EventArgs e)
         {
             removePnl("pnlCards");
-            this.Controls.Add(new pnlAddBook());
+            this.Controls.Add(new pnlAddBook(this));
+            this.button1.Visible = false;  
         }
 
         public void removePnl(string pnl)
@@ -54,10 +55,37 @@ namespace libraryBookwithcard
 
         }
 
+        public bool pnlActiv(string pnl)
+        {
+            Control control = null;
+
+            foreach (Control control1 in this.Controls)
+            {
+                if (control1.Name.Equals(pnl))
+                {
+                    return true;
+                }
+            }
+
+
+            return false;
+        }
+
         public void label1_Click(object sender, EventArgs e)
         {
-            removePnl("pnlAddBook");
-            this.Controls.Add(new pnlCards(books));
+
+            if (pnlActiv("pnlAddBook"))
+            {
+                removePnl("pnlAddBook");
+                this.Controls.Add(new pnlCards(books));
+                this.button1.Visible = true;
+            }
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

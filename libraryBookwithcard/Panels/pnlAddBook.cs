@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libraryBookwithcard.Models;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -25,9 +26,13 @@ namespace libraryBookwithcard.Panels
 
         Button btnAddBook;
 
-        
+        ControllerBooks controllerBooks;
 
-        public pnlAddBook()
+        Form1 form;
+
+        List<string> erori = new List<string>();
+
+        public pnlAddBook(Form1 form1)
         {
             this.Name = "pnlAddBook";
             this.Size = new System.Drawing.Size(600, 321);
@@ -108,19 +113,71 @@ namespace libraryBookwithcard.Panels
             this.btnAddBook.Click += new EventHandler(btnAddBook_Click);
 
 
-
+            this.controllerBooks = new ControllerBooks();
+            this.form = form1;
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
 
-           
+            errors();
 
+            if (erori.Count > 0)
+            {
+                for(int i = 0; i < erori.Count; i++)
+                {
+                    MessageBox.Show(erori[i].ToString(),"Errors",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
 
+                int id = controllerBooks.generareId();
+                string title = txtTitle.Text;
+                string author = txtAuthor.Text;
+                string genre = txtGenre.Text;
+                int year = ((int)numericYear.Value);
+
+                string text = id.ToString() + "," + title + "," + author + "," + genre + "," + year.ToString() + "\n";
+                this.controllerBooks.addBookFisier(text);
+
+                List<Book> books = new List<Book>();
+                controllerBooks.getBooks(books);
+
+                this.form.removePnl("pnlAddBook");
+                this.form.Controls.Add(new pnlCards(books));
+                this.btnAddBook.Visible = true;
+            }
 
         }
 
+        public void errors()
+        {
 
+            erori.Clear();
+
+            if (txtTitle.Text.Equals(""))
+            {
+                erori.Add("You have not entered the title");
+            }
+
+            if (txtAuthor.Text.Equals(""))
+            {
+                erori.Add("You have not entered the author");
+            }
+
+            if (txtGenre.Text.Equals(""))
+            {
+                erori.Add("You have not entered the genre");
+            }
+
+            if(numericYear.Value == 0)
+            {
+
+                erori.Add("You have not entered the year");
+            }
+
+        }
 
 
 
