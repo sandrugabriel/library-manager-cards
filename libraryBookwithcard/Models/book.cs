@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace libraryBookwithcard.Models
 {
-    internal class book
+    internal class Book
     {
         private int id;
         private string title;
@@ -15,7 +15,7 @@ namespace libraryBookwithcard.Models
         private string genre;
         private int year;
 
-        public book(int id, string title, string author, string genre, int year ) {
+        public Book(int id, string title, string author, string genre, int year ) {
         
             this.id = id;
             this.title = title;
@@ -25,7 +25,7 @@ namespace libraryBookwithcard.Models
 
         }
 
-        public book(string text)
+        public Book(string text)
         {
 
             string[] prop = text.Split(',');

@@ -53,9 +53,48 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\book.cs" />
+    <Compile Include="Mockups\MockupAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupAddBook.Designer.cs">
+      <DependentUpon>MockupAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mockups\MockupCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupCard.Designer.cs">
+      <DependentUpon>MockupCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mockups\Mockup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\Mockup.Designer.cs">
+      <DependentUpon>Mockup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Panels\pnlAddBook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\pnlCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\pnlCards.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupAddBook.resx">
+      <DependentUpon>MockupAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupCard.resx">
+      <DependentUpon>MockupCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\Mockup.resx">
+      <DependentUpon>Mockup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
