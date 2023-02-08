@@ -27,11 +27,40 @@ namespace libraryBookwithcard
 
         }
 
+        public bool pnlActiv(string pnl)
+        {
+
+
+            foreach (Control control1 in this.Controls)
+            {
+                if (control1.Name.Equals(pnl))
+                {
+                    return true;
+                }
+            }
+
+
+            return false;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            removePnl("pnlCards");
+
+
+            if (pnlActiv("pnlUpdate"))
+            {
+                removePnl("pnlUpdate");
+                this.Controls.Add(new pnlAddBook(this));
+                this.button1.Visible = false;
+            }
+            else
+            {
+                removePnl("pnlCards");
             this.Controls.Add(new pnlAddBook(this));
-            this.button1.Visible = false;  
+            this.button1.Visible = false;
+
+            }
+          
         }
 
         public void removePnl(string pnl)
@@ -55,22 +84,6 @@ namespace libraryBookwithcard
 
         }
 
-        public bool pnlActiv(string pnl)
-        {
-            
-
-            foreach (Control control1 in this.Controls)
-            {
-                if (control1.Name.Equals(pnl))
-                {
-                    return true;
-                }
-            }
-
-
-            return false;
-        }
-
         public void label1_Click(object sender, EventArgs e)
         {
 
@@ -80,7 +93,14 @@ namespace libraryBookwithcard
                 this.Controls.Add(new pnlCards(books,this));
                 this.button1.Visible = true;
             }
-           
+
+            if (pnlActiv("pnlUpdate"))
+            {
+                removePnl("pnlUpdate");
+                this.Controls.Add(new pnlCards(books, this));
+                this.button1.Visible = true;
+            }
+
         }
 
         public Control getControl(string pnl)

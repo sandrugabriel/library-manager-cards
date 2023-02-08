@@ -124,18 +124,24 @@ namespace libraryBookwithcard.Panels
 
             //BtnDelete
 
-            btnUpdate = new Button();
-            this.Controls.Add(btnUpdate);
+            btnDelete = new Button();
+            this.Controls.Add(btnDelete);
 
-            this.btnUpdate.Location = new System.Drawing.Point(399, 200);
-            this.btnUpdate.Size = new System.Drawing.Size(151, 66);
-            this.btnUpdate.BackColor = System.Drawing.Color.Red;
-            this.btnUpdate.Font = font;
-            this.btnUpdate.Name = "btnDelete";
-            this.btnUpdate.Text = "Delete";
+            this.btnDelete.Location = new System.Drawing.Point(399, 200);
+            this.btnDelete.Size = new System.Drawing.Size(151, 66);
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = font;
+            this.btnDelete.Click += new EventHandler(btnDelete_Click);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Text = "Delete";
 
             books = new List<Book>();
             controllerBooks.getBooks(books);
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -151,6 +157,17 @@ namespace libraryBookwithcard.Panels
             this.form.Controls.Add(new pnlCards(books,form));
 
         }
+
+        public void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            controllerBooks.deleteCarte(id);
+            this.form.removePnl("pnlUpdate");
+            controllerBooks.getBooks(books);
+            this.form.Controls.Add(new pnlCards(books,form));
+
+        }
+
 
     }
 }
