@@ -101,5 +101,11 @@ namespace libraryBookwithcard.Models
 
            return id.ToString() + "," + title + "," + author + "," + genre + "," + year.ToString()+ "\n";
         }
+
+        public string toSave()
+        {
+            return id.ToString() + "," + title + "," + author + "," + genre + "," + year.ToString();
+        }
+
     }
 }

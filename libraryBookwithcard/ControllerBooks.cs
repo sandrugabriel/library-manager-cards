@@ -115,6 +115,158 @@ namespace libraryBookwithcard
             return id;
         }
 
+        public string titleById(int id)
+        {
+
+            for(int i=0;i<books.Count;i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    return books[i].getTitle();
+                }
+            }
+
+            return null;
+        }
+
+        public string authorById(int id)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    return books[i].getAuthor();
+                }
+            }
+
+            return null;
+        }
+
+        public string genreById(int id)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    return books[i].getGenre();
+                }
+            }
+
+            return null;
+        }
+
+        public int yearById(int id)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    return books[i].getYear();
+                }
+            }
+
+            return -1;
+        }
+
+        public int idByTitle(string title)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getTitle().Equals(title))
+                {
+                    return books[i].getId();
+                }
+            }
+
+            return -1;
+        }
+
+
+        public void setNume(int id, string nume)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    books[i].setTitle(nume);
+                }
+            }
+
+
+        }
+
+        public void setAutor(int id, string autor)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    books[i].setAuthor(autor);
+                }
+            }
+
+
+        }
+
+        public void setGenre(int id, string genre)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    books[i].setGenre(genre);
+                }
+            }
+
+
+        }
+
+        public void setAn(int id, int an)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    books[i].setYear(an);
+                }
+            }
+
+
+        }
+
+
+        public string toSaveFisier()
+        {
+
+            string t = "";
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                t += books[i].toSave() + "\n";
+            }
+
+            return t;
+        }
+
+        public void save()
+        {
+            String path = Application.StartupPath + @"/data/books.txt";
+            StreamWriter streamWriter = new StreamWriter(path);
+
+            streamWriter.Write(this.toSaveFisier());
+
+            streamWriter.Close();
+        }
+
+
 
     }
 }
