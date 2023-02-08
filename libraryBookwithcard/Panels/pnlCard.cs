@@ -14,15 +14,20 @@ namespace libraryBookwithcard.Panels
     {
 
         Label lblTitle;
-        Label lblTitle1;
+        public Label lblTitle1;
 
         Label lblAuthor;
         Label lblAuthor1;
 
+        Label lblInfo;
+
         Book book;
+        Form1 form;
 
-        public pnlCard(Book book1) {
+        private int id;
 
+        public pnlCard(Book book1,Form1 form1) {
+            this.form = form1;
             this.Name = "pnlCard";
             this.Size = new System.Drawing.Size(191, 175);
             this.Location = new System.Drawing.Point(53, 43);
@@ -67,10 +72,16 @@ namespace libraryBookwithcard.Panels
             this.lblAuthor1.Font = font1;
             this.lblAuthor1.Text = book.getAuthor();
 
-
+            id=book1.getId();
+          
         }
 
+        public int getid()
+        {
 
+            return id;
+
+        }
 
     }
 }

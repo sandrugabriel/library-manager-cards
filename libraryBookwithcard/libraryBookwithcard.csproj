@@ -81,6 +81,9 @@
     <Compile Include="Panels\pnlCards.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Panels\pnlUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -51,7 +51,7 @@ namespace libraryBookwithcard.Panels
             this.lblTitle.Location = new System.Drawing.Point(62, 30);
             this.lblTitle.Text = "Title";
             this.lblTitle.Font = font;
-            this.AutoSize = true;
+            this.lblTitle.AutoSize = true;
             this.txtTitle.Location = new System.Drawing.Point(184, 26);
             this.txtTitle.Size = new System.Drawing.Size(172, 43);
             this.txtTitle.Font= font1;
@@ -145,7 +145,7 @@ namespace libraryBookwithcard.Panels
                 controllerBooks.getBooks(books);
 
                 this.form.removePnl("pnlAddBook");
-                this.form.Controls.Add(new pnlCards(books));
+                this.form.Controls.Add(new pnlCards(books,form));
                 this.btnAddBook.Visible = true;
             }
 
