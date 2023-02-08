@@ -268,5 +268,40 @@ namespace libraryBookwithcard
 
 
 
+        public int pozID(int id)
+        {
+
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].getId() == id)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        public void stergere(int id)
+        {
+            int p = pozID(id);
+            if (p == pozID(id))
+                books.RemoveAt(p);
+
+        }
+
+        public void deleteCarte(int id)
+        {
+            this.stergere(id);
+
+            string path = Application.StartupPath + @"/data/books.txt";
+            StreamWriter stream = new StreamWriter(path);
+
+            stream.Write(this.toSaveFisier());
+
+            stream.Close();
+        }
+
+
     }
 }
